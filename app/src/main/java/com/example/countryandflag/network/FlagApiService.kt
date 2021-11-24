@@ -23,7 +23,7 @@ private val retrofit = Retrofit.Builder()
 
 interface FlagApiService {
     @GET("images")
-    suspend fun getPhotos():List<FlagPhoto>
+    suspend fun getPhotos():Arraydata
 }
 object FlagApi {
     val retrofitService :FlagApiService by lazy {

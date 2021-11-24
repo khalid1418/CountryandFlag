@@ -25,7 +25,7 @@ class FlagViewModel:ViewModel() {
 
 
                 val listResult = FlagApi.retrofitService.getPhotos()
-                _state.value="Success: ${listResult.size} Mars photos retrieved"
+                _state.value="Success: ${listResult.data.size} Mars photos retrieved"
             }catch (e:Exception){
                 _state.value = "Failure: ${e.message}"
             }
