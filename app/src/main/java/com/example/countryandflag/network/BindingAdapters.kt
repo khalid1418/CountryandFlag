@@ -24,6 +24,8 @@ fun bindImage(imgView: ImageView, imgUrl: String) {
         val request = ImageRequest.Builder(imgView.context)
             .crossfade(true)
             .crossfade(500)
+            .placeholder(R.drawable.loading_animation)
+            .error(R.drawable.ic_broken_image)
             .data(imgUrl)
             .target(imgView)
             .build()
