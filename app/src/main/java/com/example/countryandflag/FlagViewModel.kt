@@ -10,10 +10,14 @@ import com.example.countryandflag.network.FlagPhoto
 import kotlinx.coroutines.launch
 import java.lang.Exception
 
+
+
+enum class FlagApiStatus{LOADING, ERROR, DONE}
+
 class FlagViewModel:ViewModel() {
 
-    private val _state = MutableLiveData<String>()
-     var state: LiveData<String> = _state
+    private val _state = MutableLiveData<FlagApiStatus>()
+     var state: LiveData<FlagApiStatus> = _state
     private val _images = MutableLiveData<List<FlagPhoto>>()
     val images:LiveData<List<FlagPhoto>> = _images
 
@@ -25,14 +29,16 @@ class FlagViewModel:ViewModel() {
 
     fun getFlagimages(){
         viewModelScope.launch {
+
+            _state.value = FlagApiStatus.LOADING
             try {
 
 
 //                val listResult = FlagApi.retrofitService.getPhotos()
                 _images.value = FlagApi.retrofitService.getPhotos().data
-                _state.value = "Success: Flag properties retrieved"
+                _state.value = FlagApiStatus.DONE
             }catch (e:Exception){
-                _state.value = "Failure: ${e.message}"
+                _state.value = FlagApiStatus.ERROR
             }
         }
     }

@@ -31,5 +31,16 @@
                 app:spanCount="2"
                 tools:itemCount="16"
                 tools:listitem="@layout/linerviewitem"/>
+
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:flagApiStatus="@{shareview.state}"
+                android:id="@+id/status_image"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

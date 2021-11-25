@@ -1,5 +1,6 @@
 package com.example.countryandflag.network
 
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.net.toUri
@@ -9,6 +10,7 @@ import coil.ImageLoader
 import coil.decode.SvgDecoder
 import coil.load
 import coil.request.ImageRequest
+import com.example.countryandflag.FlagApiStatus
 import com.example.countryandflag.ImageAdapter
 import com.example.countryandflag.R
 
@@ -42,4 +44,19 @@ fun bindImage(imgView: ImageView, imgUrl: String) {
 fun bindRecyclerView(recyclerView: RecyclerView, data: List<FlagPhoto>?) {
     val adapter = recyclerView.adapter as ImageAdapter
     adapter.submitList(data)
+}
+
+
+
+@BindingAdapter("flagApiStatus")
+fun bindstatus(statusImageView: ImageView , status: FlagApiStatus){
+
+    when(status){
+        FlagApiStatus.LOADING -> {statusImageView.visibility = View.VISIBLE
+        statusImageView.setImageResource(R.drawable.loading_animation)}
+        FlagApiStatus.ERROR -> {View.VISIBLE
+        statusImageView.setImageResource(R.drawable.ic_connection_error)}
+        FlagApiStatus.DONE ->statusImageView.visibility = View.GONE
+    }
+
 }
