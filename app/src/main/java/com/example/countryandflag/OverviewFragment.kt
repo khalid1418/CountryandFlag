@@ -23,6 +23,7 @@ class OverviewFragment : Fragment() {
         _binding = FragmentOverviewBinding.inflate(inflater, container, false)
         _binding?.lifecycleOwner = viewLifecycleOwner
         _binding?.shareview = viewmodel
+        binding?.photosLiner?.adapter = ImageAdapter()
 
         return _binding?.root
 

@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kaled/AndroidStudioProjects/CountryandFlag/app/src/main/res/drawable/ic_broken_image.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/kaled/AndroidStudioProjects/CountryandFlag/app/src/main/res/drawable/loading_animation.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/kaled/AndroidStudioProjects/CountryandFlag/app/src/main/res/drawable/loading_img.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/kaled/AndroidStudioProjects/CountryandFlag/app/src/main/res/layout/activity_main.xml" value="0.176" />
-        <entry key="..\:/Users/kaled/AndroidStudioProjects/CountryandFlag/app/src/main/res/layout/fragment_overview.xml" value="0.264" />
+        <entry key="..\:/Users/kaled/AndroidStudioProjects/CountryandFlag/app/src/main/res/layout/fragment_overview.xml" value="0.136" />
+        <entry key="..\:/Users/kaled/AndroidStudioProjects/CountryandFlag/app/src/main/res/layout/linerviewitem.xml" value="0.5151515151515151" />
       </map>
     </option>
   </component>
